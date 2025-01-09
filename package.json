@@ -8,6 +8,9 @@
   },
   "keywords": [
     "oracle",
+    "oem",
+    "enterprise manager",
+    "cloud control",
     "management",
     "framework",
     "python"
@@ -24,3 +27,4 @@
     "semantic-release": "^24.2.1"
   }
 }
+
