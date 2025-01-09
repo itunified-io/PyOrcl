@@ -1,0 +1,30 @@
+smtp:
+  server: "your.smtp.server"
+  port: 25
+  sender: "oem@yourdomain.com"
+  recipient: "default@yourdomain.com"
+
+debug:
+  debug: true
+  debug_level: DEBUG
+
+rules_evaluation: "all_matches"  # Options: "first_match", "all_matches"
+
+rules:
+  - condition:
+      target_name: "all"
+      target_type: "all"
+      lifecycle_status: "mission critical"
+    action:
+      recipients:
+        - "critical_team@yourdomain.com"
+        - "team_leads@yourdomain.com"
+      priority: "1"
+
+  - condition:
+      target_name: "dbserver01"
+    action:
+      recipients:
+        - "db_admins@yourdomain.com"
+      priority: "2"
+
